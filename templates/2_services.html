@@ -1,0 +1,98 @@
+{% extends "0_body.html" %}
+
+{% block main %}
+
+<!--======================================================-->
+<!--                   СТРАНИЦА УСЛУГИ                    -->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<link rel="stylesheet" href="/static/1_main_CSS.css">
+<style>
+    ._1_heading_cl > h1 {
+        font-family: monospace;
+        text-shadow: 2px 2px 2px black;
+        font-size: 60px;
+        color: #70544f;
+    }
+</style>
+<div class="_1_select_service_cl" id="_1_service_body_id">
+    <!--ПРЕДЛОЖЕНИЯ-->
+    <div class="_1_heading_cl" id="_1_service_block_head_id"><h1>предложения</h1></div>
+    <div id="_1_service_block_id">
+        <template id="_1_template_id">
+            <div class="_1_service_cl">
+                <!--Блок генерации услуг-->
+                <div class="_1_temp_0_cl">
+                    <!--Иконка услуги-->
+                </div>
+                <div>
+                    <div>
+                        <!--Информация об услуге-->
+                        <div class="_1_temp_1div_cl">
+                            <!--Наименование услуги-->
+                            <b class="_1_temp_1_cl">Food - cтанции</b>
+                        </div>
+                        <div class="_1_temp_2_cl">
+                            <!--Описание услуги-->
+                            различные блюды, напитки и закуски над одним столом
+                        </div>
+                        <div class="_1_white_fog_cl">
+                            <!--Эффект белого тумана-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</div>
+<script>
+    let service_block = document.getElementById('_1_service_block_id'); // (блок генерации услуг);
+    let template = document.getElementById('_1_template_id'); // (блок template);
+    let temp_0 = template.content.querySelector('._1_temp_0_cl'); // (div иконка услуги);
+    const temp_1 = template.content.querySelector('._1_temp_1_cl'); // (div наименование услуги);
+    const temp_2 = template.content.querySelector('._1_temp_2_cl'); // (div описание услуги);
+    const temp_3 = template.content.querySelector('._1_service_cl'); // (весь блок копирования);
+    let num_services = 0; // (количество услуг);
+    // Генерация блоков услуг;
+    document.addEventListener('DOMContentLoaded', _=>{
+    // (запрос списка услуг);
+    let xhr = new XMLHttpRequest(); // XMLHttp метод для ajax "GET" запроса; 
+    xhr.open('GET', '/request_for_services', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            let data = JSON.parse(xhr.responseText); // (список услуг);
+            num_services = JSON.stringify(data).length - 1; // (установка количества услуг);
+            for (let n=0; n<JSON.stringify(data).length; n++) {
+                temp_0.style.backgroundImage = `url(${data[n][0]})`; // (клонирование иконки "ПРЕДЛОЖЕНИЯ");
+                temp_1.innerText = data[n][1]; // (клонирование наименования "ПРЕДЛОЖЕНИЯ");
+                temp_1.id = `name_${n}_id`; 
+                temp_2.innerText = data[n][2]; // (клонирование описания "ПРЕДЛОЖЕНИЯ");
+                temp_3.id = `temp_clone_id_${n}`;
+                let template_clone = template.content.cloneNode(true); // (клонирование template "ПРЕДЛОЖЕНИЯ");
+                service_block.append(template_clone);
+            };
+        }
+    };
+    xhr.send();
+    })
+    // Открытие подстраниц;
+    document.addEventListener('click', (e) => {
+        for (let n = 0; n < num_services; n++) {
+            let elem_0 = e.target.id;
+            let elem_1 = e.target.parentElement.id;
+            let elem_2 = e.target.parentElement.parentElement.id;
+            let elem_3 = e.target.parentElement.parentElement.parentElement.id;
+            let elem_4 = e.target.parentElement.parentElement.parentElement.parentElement.id;
+            if (elem_0 == `temp_clone_id_${n}` || elem_1 == `temp_clone_id_${n}` || elem_2 == `temp_clone_id_${n}` || elem_3 == `temp_clone_id_${n}` || elem_4 == `temp_clone_id_${n}`) {
+                // Запрос "POST" на "УСЛУГИ";
+                let xhr = new XMLHttpRequest(); // XMLHttp метод для ajax "POST" запроса;
+                xhr.open('POST', '/request_for_name_service', true);
+                xhr.setRequestHeader('Content-type', "application/x-www-form-urlencoded");
+                xhr.send(JSON.stringify({ 'name_service': String(document.getElementById(`name_${n}_id`).innerText) }));
+                console.log(String(document.getElementById(`name_${n}_id`).innerText));
+                document.location.href = '/stations';
+            }
+        }
+    });
+</script>
+
+{% endblock %}

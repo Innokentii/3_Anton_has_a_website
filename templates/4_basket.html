@@ -1,0 +1,63 @@
+{% extends "0_body.html" %}
+
+{% block main %}
+
+<!--======================================================-->
+<!--                       КОРЗИНА                        -->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<link rel="stylesheet" href="/static/4_basket_CSS.css">
+<h2>корзина</h2>
+<div class="_4_basket_cl">
+    <div>
+        <!--Таблица выбранных товаров-->
+        <table class="_4_table_cl">
+            <thead id="_4_table_id">
+                <tr>
+                    <th>№</th>
+                    <th>Наименование товара</th>
+                    <th>цена</th>
+                    <th>кол.</th>
+                    <th>сумма</th>
+                    <th>DEL.</th>
+                </tr>
+                <template id="_4_template_id">
+                    <tr id="tr_block_id">
+                        <td id="table_num_id">1</td>
+                        <td id="table_name_id">Круасаны</td>
+                        <td id="table_price_id">1200 ₽</td>
+                        <td id="table_quantity_id">8</td>
+                        <td id="table_amount_id">9600 ₽</td>
+                        <td id="table_x_id">х</td>
+                    </tr>
+                </template>
+            </thead>
+        </table>
+        <div class="_4_amount_goods_cl"><div>общая сумма:</div><div id="amount_id"> 0 ₽</div></div>
+    </div>
+    <div class="_4_order_cl">
+        <!--Блок управления заказами-->
+        <div>
+            <span>для заказа просим указать адрес прведения мероприятия, контактный номер, электронную почту и в пожеланиях укажите дату когда хотите принять заказ и прочее пожелания по заказу.</span>
+        </div>
+        <div><div>ваш адрес: </div><input type="text" id="address_id"></div>
+        <div><div>конт.ном.: </div><input type="text" placeholder="*обязательно" id="contact_number_id"></div>
+        <div><div>эл. почта: </div><input type="text" id="Email_id"></div>
+        <div><div>ваши пожелания: </div><textarea name="" id="wishes_id" cols="30" rows="4" placeholder="*обязательно" id=""></textarea></div>
+        <div id="_4_del_all_id">удалить все заказы</div>
+        <div id="_4_order_id">Заказать</div>
+    </div>
+</div>
+<div id="order_accepted_id">
+
+</div>
+<div id="order_modal_id">
+    <div id="X_close_id">X</div>
+    <div>ваш заказ принят!!!</div>
+    <div>Просим вас подождать. В течении дня вам позвонит наш менеджер. спасибо за заказ)</div>
+</div>
+<div id="_4_stiker_id">
+    <!--Предупреждение об необходимости указания количества товара-->
+    Заполните контактный номер и ваши пожелания!
+</div>
+<script src="/static/4_basket_JS.js"></script>
+{% endblock %}

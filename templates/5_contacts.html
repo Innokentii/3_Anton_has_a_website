@@ -1,0 +1,76 @@
+{% extends "0_body.html" %}
+
+{% block main %}
+
+<!--======================================================-->
+<!--                      КОНТАКТЫ                        -->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<link rel="stylesheet" href="/static/1_main_CSS.css">
+<style>
+    ._1_heading_cl {
+        font-family: monospace;
+        text-shadow: 2px 2px 2px black;
+        font-size: 30px;
+        color: #70544f;
+    }
+</style>
+<div class="_1_select_cl">
+    <div class="_1_heading_cl">
+        <h1>контакты</h1>
+    </div>
+    <div class="_1_contacts_cl">
+        <!--БЛОК КОНТАКТЫ-->
+        <div>
+            <!--Карта местоположения-->
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aad6d0fa09bfe69df80fffa803d23e3aeaf5363b0b0274a3db49ebb6e90cf67d7&amp;width=100%25&amp;height=287&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+        <div class="_1_contacts_table_cl">
+            <!--Таблица контактов-->
+            <table>
+                <thead>
+                    <tr>
+                        <td>1</td>
+                        <td>горячая линия:</td>
+                        <td>8 (999) 888-77-66</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>WhatsApp:</td>
+                        <td>8 (777) 555-44-77</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>эл.почта:</td>
+                        <td>moodpoint@mail.com</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Instagram:</td>
+                        <td><a href="https://www.instagram.com/">https://www.instagram.com/</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>VKontakte:</td>
+                        <td><a href="https://www.instagram.com/">https://www.instagram.com/</a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Адрес:</td>
+                        <td>Москва, Центральный административный округ, Пресненский район, Московский международный
+                            деловой центр Москва-Сити</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    let win_height = window.innerHeight; // (высота рабочего окна сайта);
+    let head_height = document.querySelector('._0_head_cl').clientHeight; // (высота головы сайта);
+    let heigh_work = win_height - head_height - 104; // (рабочая высота);
+    let select = document.querySelector('._1_select_cl');
+    select.style.height = `${heigh_work}px`; // (изменение высоты информационных блоков);
+</script>
+
+{% endblock %}

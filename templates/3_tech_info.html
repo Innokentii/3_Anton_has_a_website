@@ -1,0 +1,83 @@
+{% extends "0_body.html" %}
+
+{% block main %}
+
+<!--======================================================-->
+<!--               ТЕХНИЧЕСКАЯ ИНФОРМАЦИЯ                 -->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<style>
+    h2 {
+    font-family: monospace;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bolder;
+    font-size: 50px;
+    color: #70544f;
+    text-align: center;
+    }
+
+    ._3_tech_info_cl {
+        font-family: monospace;
+        font-size: 18px;
+        font-weight: bolder;
+        color: rgb(47, 47, 46);
+        padding: 40px;
+        border-bottom: ridge 6px red;
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    td {
+        border: solid 3px black;
+    }
+
+    tr > td:nth-child(1) {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+    }
+
+    tr > td:nth-child(2) {
+        padding-left: 8px;
+        text-align: start;
+    }
+
+</style>
+<div class="_3_tech_info_cl">
+    <h2>Техническая информация</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>1</td>
+                <td>Для работы наших станций нам необходимо подключение к электричеству.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Требуемая мощность может варьироваться в зависимости от количества станций и объема заказанных позиций (обычно это от 1 до 7 кВт)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Напряжение в розетки (или розетки, если станций несколько) - 220V.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Габаритные размеры наших станций - 2м длина и 0.8м ширина.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Если это необходимо, мы всегда готовы заранее приехать на площадку, посмотреть предполагаемое место работы, уточнить все детали по подключению, заезду, погрузке и выгрузке оборудования, чтобы и нам и организаторам в день мероприятия было спокойнее.</td>
+            </tr>
+        </thead>
+    </table>
+</div>
+<script>
+    let win_height = window.innerHeight; // (высота рабочего окна сайта);
+    let head_height = document.querySelector('._0_head_cl').clientHeight; // (высота головы сайта);
+    let heigh_work = win_height - head_height - 185; // (рабочая высота);
+    let select = document.querySelector('._3_tech_info_cl');
+    select.style.height = `${heigh_work}px`; // (изменение высоты информационных блоков);
+</script>
+
+{% endblock %}

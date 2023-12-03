@@ -1,0 +1,104 @@
+{% extends "0_body.html" %}
+
+{% block main %}
+
+<!--======================================================-->
+<!--                Подстраница "СТАНЦИИ"                 -->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+
+<link rel="stylesheet" href="/static/2_0_CSS.css">
+<div class="_2_0_head_cl">Услуги "СТАНЦИИ"</div>
+<div class="_2_0_body_cl">
+    <template id="_2_1_temp_product_id">
+        <div class="_2_0_cl">
+            <div class="_2_1_img_cl">
+                <!--Иконка товара-->
+            </div>
+            <div class="_2_1_cl">
+                <div>
+                    <!--Информационный модуль-->
+                    <div class="_2_1_name_cl">
+                        <!--Наименование товара-->
+                        Сахарная вата
+                    </div>
+                    <div class="_2_1_price_cl">
+                        <!--Цена-->
+                        <span id="_2_1_price_id">2500</span>
+                        <span>₽</span>
+                        <span id="_2_1_price_amount_id"></span>
+                    </div>
+                    <div class="_2_1_description_cl">
+                        <!--Описание товара-->
+                        <span class="_2_1_descr_span_cl" id="_2_1_description_id">Попробовав вы попадете в мир волшебства и вкуса с нашей бесподобной сахарной ватой! Наши
+                            мастера создают это изысканное удовольствие, используя только лучшие ингредиенты и тайные
+                            рецепты, чтобы превратить обычное в сладкое волшебство.</span>
+                    </div>
+                </div>
+                <div class="_2_1_purchase_cl">
+                    <!--Закупки-->
+                    <div class="_2_1_purchase_adjustment_cl">
+                        <div>
+                            <!--Добавить либо убавить на единицу-->
+                            <div id="minus_1_id">-</div>
+                            <div>доб. 1-ед.</div>
+                            <div id="plus_1_id">+</div>
+                        </div>
+                        <div>
+                            <!--Добавить либо убавить на десятку-->
+                            <div id="minus_10_id">-</div>
+                            <div>доб. 10-ед.</div>
+                            <div id="plus_10_id">+</div>
+                        </div>
+                    </div>
+                    <div class="_2_1_quantity_cl">
+                        <!--Количество товаров-->
+                        <span id="_2_1_quantity_id">0</span><span> шт.</span>
+                    </div>
+                    <div class="_2_1_basket_cl"><b>в корзину</b></div>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
+<div class="_2_1_sticker_not_pr_cl">
+    <!--Предупреждение об необходимости указания количества товара-->
+    Укажите количество товаров
+</div>
+<div id="product_description_fog_id">
+    <!--Туман модального окна описания товара-->
+</div>
+<div id="product_description_modal_window_id">
+    <!--Карта модального окна описания товара-->
+    <div id="close_x_id">X</div>
+    <div class="info_block_modals_cl">
+        <div>
+            <img id="img_main_id" src="" alt="Н/Ф">
+            <img id="img_1_id" src="" alt="Н/Ф">
+            <img id="img_2_id" src="" alt="Н/Ф">
+            <img id="img_3_id" src="" alt="Н/Ф"></div>
+        <div>
+            <div id="name_module_id">Сахарная вата</div>
+            <div id="price_module_id">1200 ₽</div>
+            <div id="description_module_id">Попробовав вы попадете в мир волшебства и вкуса с нашей бесподобной сахарной ватой! Наши
+                мастера создают это изысканное удовольствие, используя только лучшие ингредиенты и тайные
+                рецепты, чтобы превратить обычное в сладкое волшебство.</div>
+        </div>
+    </div>
+    <div class="modal_windows_cl">
+        <div>в стоимость входит:</div>
+        <div id="description_cost_id">
+            1
+        </div>
+        <div>дополнительно оплачивается:</div>
+        <div id="additionally_paid_id">
+            2
+        </div>
+        <div>подробное описание:</div>
+        <div id="detailed_description_id">
+            3
+        </div>
+    </div>
+</div>
+<script src="/static/2_0.js"></script>
+
+{% endblock %}

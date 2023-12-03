@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood point</title>
+    <link rel="icon" href="/static/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/0_body_CSS.css">
+</head>
+
+<!--======================================================-->
+<!--                     КАРКАС САЙТА                     -->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+
+<body>
+    <div id="_0_media_id">
+        <div class="_0_head_cl">
+            <!--Голова сайта-->
+            <div id="_0_main_buttom_id">
+                <!--Иконка сайта Mood Point-->
+            </div>
+            <div>
+                <!--Блок линии выбора страниц-->
+                <div id="_0_1_main_buttom_id">
+                    <div><span>ГЛАВНАЯ</span></div>
+                </div>
+                <div id="_0_services_buttom_id">
+                    <div><span>УСЛУГИ</span></div>
+                </div>
+                <div id="_0_tech_info_buttom_id">
+                    <div><span>ТЕХ.ИНФ.</span></div>
+                </div>
+                <div id="_0_basket_buttom_id">
+                    <div><span>КОРЗИНА</span></div>
+                </div>
+                <div id="_0_contacts_buttom_id">
+                    <div><span>КОНТАКТЫ</span></div>
+                </div>
+            </div>
+        </div>
+        {% block main %}
+        {% endblock %}
+        <div class="_0_footer_cl">
+            <!--ПОДВАЛ САЙТА-->
+            <div class="_0_footer_contacts_cl">
+                <div>Мы не только предложим вам вкуснейшее меню для мероприятия, но и поможем советами и рекомендациями, для того чтобы ваш праздник был идеальным</div>
+                <div><!--ссылка "WhatsApp"--></div>
+                <div><!--ссылка "Instagram"--></div>
+                <div><!--ссылка "VKontakte"--></div>
+                <div>
+                    8 (999) 888-77-66,<br>
+                    moodpoint@mail.com
+                </div>
+            </div>
+            <div>
+                Fan-Кейтеринг © 2023, ООО "Mood Point"
+            </div>
+        </div>
+    </div>
+    <div id="load_id" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(/static/loading.png); background-size: cover; background-position: 50% 60%; z-index: 9999; transition: 600ms;">
+        <!--ЗАГРУЗКА-->
+    </div>
+    <div class="_0_media_check_cl" style="display: none;">
+        <div><span>Ширина-</span><span id="_0_media_width_id">0</span>px</div>
+        <div><span>Высота-</span><span id="_0_media_length_id">0</span>px</div>
+    </div>
+    <script>
+        // Загрузка;
+        document.addEventListener('DOMContentLoaded', _=>{
+            let load = document.getElementById('load_id');
+            load.style.filter = 'opacity(0%)';
+            setTimeout(()=>{load.style.display = 'none'}, 900);
+        });
+
+        // Указание размеров экрана;
+        document.getElementById('_0_media_width_id').innerText = window.innerWidth;
+        document.getElementById('_0_media_length_id').innerText = window.innerHeight;
+        window.addEventListener('resize', _=>{
+            console.log(123);
+            document.getElementById('_0_media_width_id').innerText = window.innerWidth;
+            document.getElementById('_0_media_length_id').innerText = window.innerHeight;
+        });
+    </script>
+    <script src="/static/0_body_JS.js"></script>
+</body>
+
+</html>
