@@ -1,0 +1,371 @@
+/*===========================================================================================================*/
+/*                                        Стилизация обычных блоков                                          */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+._1_main_cl {
+    /* ИНФОРМАЦИОННЫЕ БЛОКИ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._1_heading_cl{
+    /* Заглавление информационных блоков */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 120px;
+    background: radial-gradient(50% 50% at 50% 50%, #DE2121 0%, rgba(204, 77, 77, 0.69) 32.29%, rgba(194, 124, 124, 0.33) 67.71%, rgba(235, 194, 194, 0.00) 100%);
+}
+
+._1_main_cl > div > div > h1 {
+    /* Текст заглавление информационных блоков */
+    font-family: monospace;
+    text-shadow: 2px 2px 2px black;
+    font-size: 60px;
+    color: #1b4aca;
+}
+
+._1_main_cl > div:nth-child(1) {
+    /* Встречающая страница */
+    width: calc(100% - 8px);
+    border: outset 4px red;
+}
+
+._1_main_cl > div:nth-child(2) {
+    /* Встречающая страница */
+    width: 100% - 8px;
+}
+
+._1_background_food_1_cl, ._1_background_food_2_cl, ._1_background_food_3_cl {
+    /* Изображение еды №1, №2, №3 */
+    position: absolute;
+    background-size: cover;
+    transition: 2100ms;
+}
+
+._1_background_food_cl {
+    /* Изображение фона встречающего блока */
+    width: 100%;
+    height: 100%;
+    background-image: url(/static/1_about_us_0.jpg);
+    background-position: 50% 65%;
+    background-size: cover;
+    filter: brightness(30%);
+}
+
+._1_background_food_0_cl {
+    /* Изображение еды №0 */
+    position: absolute;
+    left: 30px;
+    color: rgb(227, 171, 17);
+    font-size: 28px;
+    font-family: monospace;
+}
+
+._1_background_food_0_cl > div {
+    background-color: rgb(93, 97, 218);
+    margin: 15px;
+    margin-top: 60px;
+    border: double 8px #70544fff;
+    text-shadow: 3px 3px 3px black;
+}
+
+._1_background_food_0_cl > div > span {
+    font-family: cursive;
+    color: #292a2c;
+    font-size: 70px;
+    margin-left: 70px;
+}
+
+._1_background_food_1_cl {
+    /* Изображение еды №1 */
+    width: 500px;
+    height: 287.5px;
+    background-image: url(/static/1_background_food-1.png);
+    z-index: 4;
+    top: 400px;
+    right: 0;
+}
+
+._1_background_food_2_cl {
+    /* Изображение еды №2 */
+    width: 400px;
+    height: 280px;
+    background-image: url(/static/1_background_food-2.png);
+    z-index: 3;
+    top: 200px;
+    right: 0;
+}
+
+._1_background_food_3_cl {
+    /* Изображение еды №3 */
+    width: 450px;
+    height: 300px;
+    background-image: url(/static/1_background_food-3.png);
+    z-index: 2;
+    top: 50px;
+    right: 0;
+}
+
+._1_background_food_4_cl {
+    /* Изображение еды №4 */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 450px;
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(45deg, rgb(183, 171, 171), rgb(64, 166, 230),rgb(47, 0, 255));
+    z-index: 5;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+._1_background_food_4_cl > div {
+    margin: 30px;
+    margin-bottom: 90px;
+    color: rgb(255, 242, 0);
+    font-size: 80px;
+    text-align: end;
+    text-shadow: 3px 3px 3px black;
+}
+
+._1_select_cl {
+    /* Стилизация информационных блоков */
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: ridge 6px red;
+}
+
+._1_select_service_cl {
+    /* Стилизация информационных блоков */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: ridge 6px red;
+    height: 100%;
+}
+
+#_1_service_block_id {
+    /* Блок генерации услуг */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+/*___________________СТИЛИЗАЦИЯ БЛОКА ГЕНЕРАЦИИ УСЛУГ____________________*/
+._1_service_cl {
+    /* Блок генерации услуг */
+    width: 440px;
+    height: 200px;
+    display: flex;
+    gap: 10px;
+    border: solid 2px rgb(43, 42, 42);
+    border-radius: 20px;
+    padding: 10px;
+    filter: brightness(90%);
+    transition: 300ms;
+    background: linear-gradient(90deg, rgb(255, 255, 248), rgb(253, 238, 150), rgb(233, 194, 53), rgb(240, 181, 5));
+    margin: 4px;
+}
+
+._1_service_cl > div:nth-child(1) {
+    /* Иконка услуги */
+    width: 200px;
+    height: 200px;
+    border: solid 2px rgb(84, 81, 81);
+    border-radius: 20px;
+    background-size: 120%;
+    background-position: 50% 35%;
+}
+
+._1_service_cl > div:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    font-family: sans-serif;
+}
+
+._1_service_cl > div:nth-child(2) > div > div:nth-child(1) {
+    /* Наименование услуги */
+    font-size: 23px;
+    color: #1b4aca;
+    text-shadow: 1px 1px 1px rgb(37, 37, 37);
+    z-index: 2;
+    margin-left: 5px;
+}
+
+._1_service_cl > div:nth-child(2) > div > div:nth-child(2) {
+    /* Описание услуги */
+    width: 220px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #1b4aca;
+    z-index: 2;
+    margin-left: 5px;
+}
+
+._1_temp_1div_cl {
+    /* Наименование услуги */
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+._1_temp_2_cl {
+    /* Описание услуги */
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+._1_white_fog_cl {
+    position: relative;
+    bottom: 100%;
+    background-color: white;
+    border-radius: 10px;
+    filter: opacity(20%);
+    filter: blur(8px);
+    width: 230px;
+    height: 100%;
+    z-index: -1;
+}
+
+/*___________________СТИЛИЗАЦИЯ БЛОКА "О НАС"____________________*/
+._1_about_us_cl {
+    display: grid;
+}
+
+._1_about_us_0_cl {
+    /* ФОНОВОЕ ИЗОБРАЖЕНИЕ О НАС */
+    position: absolute;
+    width: 100%;
+    background-image: url(/static/1_about_us_0.jpg);
+    background-size: cover;
+    background-position: 50% 70%;
+    filter: brightness(28%);
+}
+
+._1_about_us_1_cl {
+    /* Текст заглавление информационного блока */
+    position: relative;
+    left: 100px;
+    width: 200px;
+    font-family: monospace;
+    text-shadow: 2px 2px 2px black;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #70544f;
+    margin: 10px;
+    border: double 6px #70544fff;
+    background-color: rgb(218, 193, 93);
+    padding: 10px;
+    padding-left: 120px;
+    padding-right: 120px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+._1_about_us_2_cl {
+    /* ПОВАР */
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background-image: url(/static/1_about_us_1.png);
+    background-size: cover;
+    background-position: 50% 30%;
+    z-index: 3;
+}
+
+._1_about_us_3_cl {
+    /* ОФИЦИАНТ */
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background-image: url(/static/1_about_us_2.png);
+    background-size: cover;
+    background-position: 50% 30%;
+    z-index: 2;
+}
+
+._1_about_us_4_cl {
+    /* ОПИСАНИЕ "О НАС" */
+    position: relative;
+    width: 640px;
+    bottom: 1000px;
+    left: 50px;
+    color: rgb(227, 171, 17);
+    font-size: 18px;
+    font-family: monospace;
+}
+
+._1_about_us_4_cl > p {
+    text-indent: 25px;
+}
+
+/*___________________СТИЛИЗАЦИЯ БЛОКА "КОНТАКТЫ"____________________*/
+._1_contacts_cl {
+    /* БЛОК КОНТАКТЫ */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+._1_contacts_cl > div:nth-child(1) {
+    /* Карта местоположения */
+    width: 600px;
+    border: solid 2px black;
+}
+
+._1_contacts_table_cl {
+    /* Таблица контактов */
+    width: 800px;
+    font-size: 25px;
+    color: rgb(34, 33, 32);
+    font-family: monospace;
+}
+
+._1_contacts_table_cl > table {
+    border-collapse: collapse;
+}
+
+._1_contacts_table_cl > table > thead > tr > td:nth-child(1) {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+._1_contacts_table_cl > table > thead > tr > td:nth-child(2) {
+    width: 200px;
+    font-weight: bolder;
+}
+
+._1_contacts_table_cl > table > thead > tr > td {
+    border: solid 2px ;
+    padding-left: 6px;
+}
+
+/*===========================================================================================================*/
+/*                                    Стилизация функциональных блоков                                       */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+._1_service_cl:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+    margin: 0;
+    border: solid 4px rgb(220, 43, 43);
+}
+

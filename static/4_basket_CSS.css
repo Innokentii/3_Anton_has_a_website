@@ -1,0 +1,290 @@
+/*===========================================================================================================*/
+/*                                        Стилизация обычных блоков                                          */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+h2 {
+    font-family: monospace;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bolder;
+    font-size: 50px;
+    color: #70544f;
+    text-align: center;
+    margin: 10px;
+}
+
+._4_basket_cl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/*_________________Таблица выбранных товаров______________________*/
+._4_basket_cl > div:nth-child(1) {
+    height: 425px;
+    overflow-y: scroll;
+    background: linear-gradient(240deg, white, rgb(227, 217, 189), rgb(229, 189, 90), rgb(238, 172, 4));
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+._4_table_cl {
+    border-collapse: collapse;
+}
+
+._4_table_cl > thead > tr > th, ._4_table_cl > thead > tr > td {
+    border: solid 2px black;
+    border-top: none;
+    border-left: none;
+}
+
+._4_table_cl > thead > tr > td, ._4_table_cl > thead > tr > th {
+    height: 25px;
+}
+
+._4_table_cl > thead > tr > th:nth-child(1), ._4_table_cl > thead > tr > td:nth-child(1) {
+    width: 30px;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;}
+._4_table_cl > thead > tr > th:nth-child(2), ._4_table_cl > thead > tr > td:nth-child(2) {
+    width: 400px;
+    padding-left: 5px;
+    font-family: monospace;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+    font-size: 20px;
+    color: #70544f;
+}
+._4_table_cl > thead > tr > th:nth-child(3), ._4_table_cl > thead > tr > td:nth-child(3) {
+    width: 100px;
+    font-family: monospace;
+    font-weight: bolder;;
+    font-size: 20px;
+    color: rgb(227, 171, 17);
+    background-color: #492a0b;
+    text-align: center;
+}
+._4_table_cl > thead > tr > th:nth-child(4), ._4_table_cl > thead > tr > td:nth-child(4) {
+    width: 50px;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #171717;
+    text-align: center;
+}
+._4_table_cl > thead > tr > th:nth-child(5), ._4_table_cl > thead > tr > td:nth-child(5) {
+    width: 150px;
+    font-family: monospace;
+    font-weight: bolder;;
+    font-size: 20px;
+    color: rgb(227, 171, 17);
+    background-color: #492a0b;
+    text-align: center;
+}
+._4_table_cl > thead > tr > th:nth-child(6), ._4_table_cl > thead > tr > td:nth-child(6) {
+    width: 35px;
+    background-color: rgb(54, 52, 52);
+    font-family: monospace;
+    font-weight: bolder;
+    color: rgb(222, 26, 26);
+    text-align: center;
+}
+
+._4_amount_goods_cl {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    border-top: solid 2px black;
+}
+
+._4_amount_goods_cl > div:nth-child(1) {
+    width: 200px;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+    font-size: 25px;
+    color: #70544f;
+}
+
+._4_amount_goods_cl > div:nth-child(2) {
+    width: 200px;
+    font-family: monospace;
+    font-weight: bolder;;
+    font-size: 25px;
+    color: rgb(227, 171, 17);
+    background-color: #492a0b;
+    text-align: center;
+}
+
+/*_________________Блок управления заказами______________________*/
+._4_order_cl {
+    width: 400px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    align-items: start;
+    background-color: #492a0b;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    color: rgb(227, 171, 17);
+    font-family: monospace;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+._4_order_cl > div {
+    display: flex;
+    flex-direction: row;
+}
+
+._4_order_cl > div:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+._4_order_cl > div > span {
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(227, 171, 17);
+    text-shadow: 1px 1px 1px rgb(227, 175, 20);
+}
+
+._4_order_cl > div > div {
+    width: 130px;
+}
+
+._4_order_cl > div > input {
+    width: 235px;
+}
+
+#_4_del_all_id, #_4_order_id {
+    width: 300px;
+    height: 30px;
+    border: solid 1px black;
+    border-radius: 4px;
+    font-size: 22px;
+    font-weight: bolder;
+    color: rgb(36, 35, 35);
+    align-items: center;
+    justify-content: center;
+}
+
+#_4_del_all_id {
+    background: linear-gradient(45deg, rgb(227, 218, 218), rgb(228, 143, 143), rgb(226, 53, 53), red);
+}
+
+#_4_order_id {
+    background: linear-gradient(45deg, green, rgb(51, 228, 51), rgb(136, 215, 136), rgb(209, 221, 209));
+}
+
+/*___________Модальное окно принятия заказа_____________*/
+#order_accepted_id {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #555353;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#order_modal_id {
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    left: calc(50% - 250px);
+    top: calc(50% - 200px);
+    background: linear-gradient(240deg, white, rgb(227, 217, 189), rgb(229, 189, 90), rgb(238, 172, 4));
+    z-index: 11;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(227, 171, 17);
+    font-family: monospace;
+    font-size: 24px;
+}
+#order_modal_id > div:nth-child(1) {
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-weight: bolder;
+    border: solid 1px black;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    margin-left: 425px;
+    margin-top: 50px;
+}
+
+#order_modal_id > div:nth-child(2) {
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
+    background-color: #492a0b;
+    width: 500px;
+    height: 50px;
+    padding-top: 20px;
+}
+
+#order_modal_id > div:nth-child(3) {
+    margin-top: 30px;
+    color: #492a0b;
+    font-weight: bolder;
+    padding-left: 50px;
+}
+
+#_4_stiker_id {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 600px;
+    height: 100px;
+    border: solid 4px black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #492a0b;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(227, 35, 17);
+    transition: 1200ms;
+}
+
+/*===========================================================================================================*/
+/*                                    Стилизация функциональных блоков                                       */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+#_4_del_all_id:hover, #_4_order_id:hover {
+    cursor: pointer;
+}
+
+#_4_del_all_id:active, #_4_order_id:active {
+    margin: 5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    width: 290px;
+    height: 25px;
+    font-size: 20px;
+}
+
+._4_table_cl > thead > tr > td:nth-child(6):hover {
+    cursor: pointer;
+}
+
+#order_modal_id > div:nth-child(1):hover {
+    cursor: pointer;
+}

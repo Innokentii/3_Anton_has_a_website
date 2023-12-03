@@ -1,0 +1,220 @@
+/*===========================================================================================================*/
+/*                                        Стилизация обычных блоков                                          */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+body {
+    background: linear-gradient(90deg, #f8ecec, rgb(29, 197, 219), rgb(0, 26, 255));
+    margin: 0;
+}
+
+#_0_media_id {
+    /* Главный адаптивный блок */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+._0_head_cl {
+    /* Голова сайта */
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+._0_head_cl > div:nth-child(1) {
+    /* Иконка сайта Mood Point */
+    width: 300px;
+    height: 100%;
+    background-image: url(/static/logo.png);
+    background-position: 50% 59%;
+    background-size: 300px 300px;
+}
+
+._0_head_cl > div:nth-child(2) {
+    /* Блок линии выбора страниц */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f8ecec, rgb(108, 219, 29), rgb(0, 38, 255), rgba(0, 255, 0, 0));
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
+    padding-right: 50px;
+    font-size: 20px;
+    color: #1b4aca;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: bolder;
+}
+
+._0_head_cl > div:nth-child(2) > div {
+    /* Кнопки перехода на страницы - блока линии выбора страниц */
+    width: 185px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 5px;
+}
+
+._0_head_cl > div:nth-child(2) > div:nth-child(1) {
+    /* Кнопка ГЛАВНАЯ */
+    background: linear-gradient(90deg, #f8ecec, rgb(108, 219, 29), rgb(155, 163, 208), rgba(182, 185, 182, 0));
+}
+
+._0_head_cl > div:nth-child(2) > div:nth-child(2) {
+    /* Кнопка УСЛУГИ */
+    background: linear-gradient(90deg, #f8ecec, rgb(108, 219, 29), rgb(155, 163, 208), rgba(182, 185, 182, 0));
+}
+
+._0_head_cl > div:nth-child(2) > div:nth-child(3) {
+    /* Кнопка ТЕХ.ИНФ. */
+    background: linear-gradient(90deg, #f8ecec, rgb(108, 219, 29), rgb(155, 163, 208), rgba(182, 185, 182, 0));
+}
+
+._0_head_cl > div:nth-child(2) > div:nth-child(4) {
+    /* Кнопка КОРЗИНА */
+    background: linear-gradient(90deg, #f8ecec, rgb(108, 219, 29), rgb(155, 163, 208), rgba(182, 185, 182, 0));
+}
+
+._0_head_cl > div:nth-child(2) > div:nth-child(5) {
+    /* Кнопка КОНТАКТЫ */
+    background: linear-gradient(90deg, #f8ecec, rgb(108, 219, 29), rgb(155, 163, 208), rgba(182, 185, 182, 0));
+}
+
+._0_head_cl > div:nth-child(2) > div > img {
+    /* Иконки кнопок */
+    width: 60px;
+    height: 60px;
+}
+
+._0_head_cl > div:nth-child(2) > div > div {
+    /* Надпись кнопок */
+    height: 60px;
+    width: 100%;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+._0_footer_cl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    background-color: #3e579b;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+._0_footer_contacts_cl {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: end;
+    padding-right: 20px;
+}
+
+._0_footer_cl > div:nth-child(2) {
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: bolder;
+    width: 100%;
+    text-align: center;
+    color: rgb(160, 156, 156);
+}
+
+._0_footer_contacts_cl > div:nth-child(2), ._0_footer_contacts_cl > div:nth-child(3), ._0_footer_contacts_cl > div:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    border: solid 4px rgb(29, 28, 28);
+    border-radius: 20px;
+}
+
+._0_footer_contacts_cl > div:nth-child(1) {
+    font-size: 20px;
+    width: 800px;
+    font-family: monospace;
+    font-weight: bolder;
+    padding-right: 100px;
+    color: rgb(19, 19, 18);
+}
+
+._0_footer_contacts_cl > div:nth-child(2) {
+    background-image: url(/static/instagram.jpg);
+    background-size: cover;
+}
+
+._0_footer_contacts_cl > div:nth-child(3) {
+    background-image: url(/static/vkontakre.png);
+    background-size: cover;
+}
+
+._0_footer_contacts_cl > div:nth-child(4) {
+    background-image: url(/static/whatsapp.jpg);
+    background-size: cover;
+}
+
+._0_footer_contacts_cl > div:nth-child(5) {
+    font-size: 25px;
+    font-family: monospace;
+    color: rgb(227, 171, 17);
+}
+
+/*===========================================================================================================*/
+/*                                    Стилизация функциональных блоков                                       */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+._0_head_cl > div:nth-child(2) > div:hover {
+    /* Кнопки перехода на страницы - блока линии выбора страниц */
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#_0_main_buttom_id:hover {
+    /* Иконка сайта */
+    cursor: pointer;
+}
+
+._0_footer_contacts_cl > div:nth-child(2):hover, ._0_footer_contacts_cl > div:nth-child(3):hover, ._0_footer_contacts_cl > div:nth-child(4):hover {
+    cursor: pointer;
+}
+
+/*===========================================================================================================*/
+/*                                           Адаптивная верстка                                              */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+._0_media_check_cl {
+    width: 150px;
+    height: 50px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    background-color: aqua;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
